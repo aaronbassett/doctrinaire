@@ -5,7 +5,17 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "prepare": "bunx husky"
+    "prepare": "bunx husky",
+    "lint": "bun run biome lint",
+    "lint:fix": "bun run biome lint --write",
+    "format": "bun run biome format",
+    "format:fix": "bun run biome format --write",
+    "check": "bun run biome check",
+    "check:changed": "bun run biome check --changed --no-errors-on-unmatched",
+    "check:staged": "bun run biome check --staged --no-errors-on-unmatched",
+    "check:fix": "bun run biome check --fix",
+    "check:changed:fix": "bun run biome check --changed --no-errors-on-unmatched --fix",
+    "check:staged:fix": "bun run biome check --staged --no-errors-on-unmatched --fix"
   },
   "dependencies": {
     "react": "^18.3.1",
