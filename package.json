@@ -4,6 +4,7 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
+    "help": "bun ./src/utils/run-help.ts",
     "dev": "vite",
     "prepare": "bunx husky",
     "lint": "bun run biome lint",
@@ -28,12 +29,14 @@
     "@types/react": "^18.3.18",
     "@types/react-dom": "^18.3.5",
     "@vitejs/plugin-react": "^4.3.4",
+    "chalk": "^5.4.1",
     "commitizen": "^4.3.1",
     "commitlint-config-gitmoji": "^2.3.1",
     "cz-emoji-conventional": "^1.1.0",
     "husky": "^9.1.7",
     "typescript": "~5.6.2",
     "typescript-eslint": "^8.18.2",
-    "vite": "^6.0.5"
+    "vite": "^6.0.5",
+    "vite-plugin-toml": "^0.7.0"
   }
 }

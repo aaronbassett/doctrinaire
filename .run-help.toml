@@ -1,0 +1,43 @@
+[development]
+description = "Local developer environment commands"
+
+[development.commands.dev]
+name = "dev"
+description = "Start the Vite dev server"
+urls = ["https://vite.dev/guide/cli.html#dev-server"]
+
+[development.commands.prepare]
+name = "prepare"
+description = "Setup Husky and configure Git. Automatically executed after each install"
+urls = ["https://typicode.github.io/husky/how-to.html#manual-setup", "https://docs.npmjs.com/cli/v8/using-npm/scripts#life-cycle-scripts"]
+
+[linting]
+description = "Linting and formatting commands"
+
+[linting.commands.lint]
+name = "lint"
+description = "Show linting errors"
+urls = ["https://biomejs.dev/reference/cli/#biome-lint"]
+subcommands = [
+  { name = ":fix", description = "Apply safe fixes to any linting errors" }
+]
+
+[linting.commands.format]
+name = "format"
+description = "Show formatting errors"
+urls = ["https://biomejs.dev/reference/cli/#biome-format"]
+subcommands = [
+  { name = ":fix", description = "Apply safe fixes to any formatting errors" }
+]
+
+[linting.commands.check]
+name = "check"
+description = "Runs formatter, linter and import sorting against all project files"
+urls = ["https://biomejs.dev/reference/cli/#biome-check"]
+subcommands = [
+  { name = ":fix", description = "Apply safe fixes to formatting, linting and import sorting errors" },
+  { name = ":changed", description = "Runs check against only the files that have been changed compared to your default branch" },
+  { name = ":changed:fix", description = "Apply safe fixes to formatting, linting and import sorting errors for changed files" },
+  { name = ":staged", description = "Runs check against only the files that have been staged for commit" },
+  { name = ":staged:fix", description = "Apply safe fixes to formatting, linting and import sorting errors for staged files" }
+]
