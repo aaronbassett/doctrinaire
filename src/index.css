@@ -1,5 +1,4 @@
 @import "tailwindcss";
 @plugin "daisyui" {
-  @biome-ignore lint/correctness/noUnknownProperty: themes is a valid property for daisyUI
   themes: cupcake --default, synthwave --prefersdark;
 }
