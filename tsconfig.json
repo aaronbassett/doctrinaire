@@ -1,7 +1,56 @@
 {
-  "files": [],
-  "references": [
-    { "path": "./tsconfig.app.json" },
-    { "path": "./tsconfig.node.json" }
-  ]
+  "include": ["./**/*"],
+  "exclude": ["node_modules"],
+  "compilerOptions": {
+    "strict": true,
+    "baseUrl": "./",
+
+    /* Paths */
+    "paths": {
+      "@root/*": ["*"],
+      "@/*": ["src/*"]
+    },
+
+    /* Modules */
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "allowArbitraryExtensions": true,
+    "allowImportingTsExtensions": true,
+    "resolveJsonModule": true,
+
+    /* Type Checking */
+    "allowUnreachableCode": false,
+    "allowUnusedLabels": false,
+    "exactOptionalPropertyTypes": true,
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitOverride": true,
+    "noImplicitReturns": true,
+    "noPropertyAccessFromIndexSignature": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+
+    /* Emit */
+    "noEmit": true,
+    "removeComments": true,
+
+    /* JavaScript */
+    "allowJs": false,
+
+    /* Interop Constraints */
+    "esModuleInterop": false,
+    "forceConsistentCasingInFileNames": true,
+    "isolatedModules": true,
+    "verbatimModuleSyntax": true,
+
+    /* Language and Environment */
+    "target": "ESNext",
+    "experimentalDecorators": true,
+    "jsx": "react-jsx",
+
+    /* Output Formatting */
+    "noErrorTruncation": true,
+
+    /* Completeness */
+    "skipLibCheck": false
+  }
 }
