@@ -7,7 +7,7 @@
   },
   "files": {
     "ignoreUnknown": false,
-    "ignore": ["./src/index.css"] // biome does not play well with @plugin syntax
+    "ignore": ["./src/styles/index.css"] // biome does not play well with @plugin syntax
   },
   "formatter": {
     "indentStyle": "space",
