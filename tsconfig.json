@@ -3,11 +3,11 @@
   "exclude": ["node_modules"],
   "compilerOptions": {
     "strict": true,
-    "baseUrl": "./",
+    "baseUrl": ".",
 
     /* Paths */
     "paths": {
-      "@root/*": ["*"],
+      "@root/*": ["./*"],
       "@/*": ["src/*"]
     },
 

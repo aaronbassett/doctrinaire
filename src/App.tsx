@@ -1,9 +1,9 @@
+import daisyUiLogo from "@/assets/daisyUI.svg";
+import reactLogo from "@/assets/react.svg";
+import AnimatedButton from "@/components/AnimatedButton";
+import MotionIcon from "@/components/MotionIcon";
 import { useState } from "react";
 import viteLogo from "/vite.svg";
-import daisyUiLogo from "./assets/daisyUI.svg";
-import reactLogo from "./assets/react.svg";
-import AnimatedButton from "./components/AnimatedButton";
-import MotionIcon from "./components/MotionIcon";
 
 function App() {
   const [count, setCount] = useState(0);
