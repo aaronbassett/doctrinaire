@@ -3,11 +3,12 @@ import reactLogo from "@/assets/react.svg";
 import AnimatedButton from "@/components/AnimatedButton";
 import MotionIcon from "@/components/MotionIcon";
 import { Skeleton } from "@/components/ui/skeleton";
+import useCount from "@/state/count";
 import { useEffect, useState } from "react";
 import viteLogo from "/vite.svg";
 
 function App() {
-  const [count, setCount] = useState(0);
+  const { count, inc } = useCount();
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
@@ -57,9 +58,7 @@ function App() {
           <>
             <h1 className="text-center font-bold text-5xl">Vite + React + daisyUI</h1>
             <div className="flex flex-col items-center justify-center space-y-4">
-              <AnimatedButton onTap={() => setCount((count) => count + 1)}>
-                count is {count}
-              </AnimatedButton>
+              <AnimatedButton onTap={inc}>count is {count}</AnimatedButton>
               <p>
                 Edit <code>src/App.tsx</code> and save to test HMR
               </p>
