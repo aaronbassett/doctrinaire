@@ -1,6 +1,7 @@
 import { resolve } from "node:path";
 import tailwindcss from "@tailwindcss/vite";
-import react from "@vitejs/plugin-react";
+import { TanStackRouterVite } from "@tanstack/router-plugin/vite";
+import viteReact from "@vitejs/plugin-react";
 import { defineConfig } from "vite";
 import { ViteToml } from "vite-plugin-toml";
 
@@ -12,5 +13,5 @@ export default defineConfig({
       "@": resolve(__dirname, "./src"),
     },
   },
-  plugins: [react(), ViteToml(), tailwindcss()],
+  plugins: [TanStackRouterVite(), viteReact(), ViteToml(), tailwindcss()],
 });
