@@ -1,23 +1,20 @@
 {
-  "include": ["./**/*"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
   "exclude": ["node_modules"],
   "compilerOptions": {
     "strict": true,
     "baseUrl": ".",
-
     /* Paths */
     "paths": {
       "@root/*": ["./*"],
-      "@/*": ["src/*"]
+      "@/*": ["./src/*"]
     },
-
     /* Modules */
     "module": "ESNext",
     "moduleResolution": "Bundler",
     "allowArbitraryExtensions": true,
     "allowImportingTsExtensions": true,
     "resolveJsonModule": true,
-
     /* Type Checking */
     "allowUnreachableCode": false,
     "allowUnusedLabels": false,
@@ -27,29 +24,32 @@
     "noPropertyAccessFromIndexSignature": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-
     /* Emit */
     "noEmit": true,
     "removeComments": true,
-
     /* JavaScript */
     "allowJs": false,
-
+    /* Editor Support */
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
     /* Interop Constraints */
-    "esModuleInterop": false,
     "forceConsistentCasingInFileNames": true,
     "isolatedModules": true,
     "verbatimModuleSyntax": true,
-
     /* Language and Environment */
     "target": "ESNext",
     "experimentalDecorators": true,
-    "jsx": "react-jsx",
-
+    "jsx": "preserve",
+    /* Projects */
+    "incremental": true,
     /* Output Formatting */
     "noErrorTruncation": true,
-
     /* Completeness */
-    "skipLibCheck": false
+    "skipLibCheck": false,
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "esModuleInterop": true
   }
 }

@@ -1,6 +1,7 @@
 {
   "$schema": "https://biomejs.dev/schemas/1.9.4/schema.json",
   "vcs": {
+    "enabled": true,
     "clientKind": "git",
     "useIgnoreFile": true,
     "defaultBranch": "main"
@@ -8,8 +9,7 @@
   "files": {
     "ignoreUnknown": false,
     "ignore": [
-      "./src/styles/index.css", // biome does not play well with @plugin syntax
-      "./src/routeTree.gen.ts" // generated file, uses any
+      "./src/app/globals.css" // biome does not play well with @plugin syntax
     ]
   },
   "formatter": {
@@ -52,7 +52,7 @@
   },
   "overrides": [
     {
-      "include": ["./tsconfig.app.json", "./tsconfig.node.json"]
+      "include": ["./tsconfig.json"]
     }
   ]
 }
