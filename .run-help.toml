@@ -3,29 +3,51 @@ description = "Local developer environment commands"
 
 [development.commands.dev]
 name = "dev"
-description = "Start the Vite dev server"
-urls = ["https://vite.dev/guide/cli.html#dev-server"]
+description = "Start the Next.js dev server (with Turbopack)"
+
+[development.commands.build]
+name = "build"
+description = "Create an optimized production build of your application"
+
+[development.commands.start]
+name = "start"
+description = "Starts the application in production mode"
+
+[development.commands.info]
+name = "info"
+description = "Prints relevant details about the current system (handy for creating bug reports)"
+
+[development.commands.telemetry]
+name = "telemetry"
+description = "Prints current Next.js telemetry status"
+subcommands = [
+  { name = ":disable", description = "Disable Next.js telemetry" },
+  { name = ":enable", description = "Enable Next.js telemetry" }
+]
 
 [development.commands.prepare]
 name = "prepare"
 description = "Setup Husky and configure Git. Automatically executed after each install"
-urls = ["https://typicode.github.io/husky/how-to.html#manual-setup", "https://docs.npmjs.com/cli/v8/using-npm/scripts#life-cycle-scripts"]
 
 [linting]
 description = "Linting and formatting commands"
 
 [linting.commands.lint]
 name = "lint"
-description = "Show linting errors"
-urls = ["https://biomejs.dev/reference/cli/#biome-lint"]
+description = "Show linting errors from Biome (same as lint:biome)"
 subcommands = [
-  { name = ":fix", description = "Apply safe fixes to any linting errors" }
+  { name = ":fix", description = "Apply safe fixes to any linting errors from Biome (same as lint:biome:fix)" },
+  { name = ":all", description = "Run linting from both Next.js and Biome" },
+  { name = ":all:fix", description = "Apply safe fixes to any linting errors from both Next.js and Biome" },
+  { name = ":next", description = "Run linting from Next.js" },
+  { name = ":next:fix", description = "Apply safe fixes to any linting errors from Next.js" },
+  { name = ":biome", description = "Run linting from Biome" },
+  { name = ":biome:fix", description = "Apply safe fixes to any linting errors from Biome" }
 ]
 
 [linting.commands.format]
 name = "format"
 description = "Show formatting errors"
-urls = ["https://biomejs.dev/reference/cli/#biome-format"]
 subcommands = [
   { name = ":fix", description = "Apply safe fixes to any formatting errors" }
 ]
@@ -33,7 +55,6 @@ subcommands = [
 [linting.commands.check]
 name = "check"
 description = "Runs formatter, linter and import sorting against all project files"
-urls = ["https://biomejs.dev/reference/cli/#biome-check"]
 subcommands = [
   { name = ":fix", description = "Apply safe fixes to formatting, linting and import sorting errors" },
   { name = ":changed", description = "Runs check against only the files that have been changed compared to your default branch" },
