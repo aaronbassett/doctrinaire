@@ -9,7 +9,7 @@
   "files": {
     "ignoreUnknown": false,
     "ignore": [
-      "./src/app/globals.css" // biome does not play well with @plugin syntax
+      "./src/app/styles/globals.css" // biome does not play well with @plugin syntax
     ]
   },
   "formatter": {

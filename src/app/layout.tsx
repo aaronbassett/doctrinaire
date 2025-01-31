@@ -1,6 +1,7 @@
+import "@/app/styles/globals.css";
+
 import Navbar from "@/components/Navbar";
 import type { Metadata } from "next";
-import "./globals.css";
 
 export const metadata: Metadata = {
   title: "Doctrinaire - an opinionated web-app starter template",
@@ -13,7 +14,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" data-theme="synthwave">
       <body>
         <div className="mockup-browser mx-auto mt-30 max-w-5/6 border border-base-400">
           <div className="mockup-browser-toolbar">

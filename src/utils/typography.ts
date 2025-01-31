@@ -1,4 +1,4 @@
-export const toApTitleCase = (str: string): string => {
+const toApTitleCase = (str: string): string => {
   const stopwords = "a an and at but by for in nor of on or so the to up yet".split(" ");
   const splitOn = /(\s+|[-‑–—,:;!?()])/;
 
@@ -14,3 +14,5 @@ export const toApTitleCase = (str: string): string => {
     })
     .join("");
 };
+
+export { toApTitleCase };
